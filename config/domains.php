@@ -232,7 +232,7 @@ return [
         'add_to_class_in_invoice'       => false,
         'settlement_invoices'            => false
     ],
-    "https://zfitnesseg.com" => [
+    "https://bounceabalance.com" => [
         "employees_schedule"            => false,
         "timeline_schedule"             => true,
         "due_payment"                   => true,
