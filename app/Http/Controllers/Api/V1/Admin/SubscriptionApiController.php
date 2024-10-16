@@ -86,7 +86,7 @@ class SubscriptionApiController extends Controller
                 ],
                 'start_date' => 'required|date_format:Y-m-d',
                 'name'                 => 'string|required',
-                'phone'                => 'string|required_unless:minor,yes|min:10|max:11|unique:leads,phone,NULL,id,deleted_at,NULL',
+                'phone'                => 'string|required_unless:minor,yes|min:10|max:10|unique:leads,phone,NULL,id,deleted_at,NULL',
                 'gender'               => 'required',
             ]);
             // create lead and transform it to member

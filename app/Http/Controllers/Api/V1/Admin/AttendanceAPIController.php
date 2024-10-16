@@ -639,7 +639,7 @@ class AttendanceAPIController extends Controller
         if (is_null($request['lead_id'])) {
                 $request->validate([
                     'name'                  => 'required',
-                    'phone'                 => 'min:11|max:11|unique:leads,phone',
+                    'phone'                 => 'min:10|max:10|unique:leads,phone',
                     'gender'                => 'required',
                     'branch_id'             => 'required',
                     // 'sales_by_id'           => 'required',

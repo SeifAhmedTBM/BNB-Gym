@@ -24,13 +24,13 @@ class UpdateLeadRequest extends FormRequest
             'phone' => [
                 'nullable',
                 'required',
-                'min:11',
-                'max:11'
+                'min:10',
+                'max:10'
             ],
             'national' => [
                 'nullable',
-                'min:14',
-                'max:14'
+                'min:10',
+                'max:10'
             ],
             'status_id' => [
                 'required',
