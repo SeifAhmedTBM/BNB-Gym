@@ -58,7 +58,7 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin'], 
         Route::apiResource('', 'ServicesApiController');
         Route::get('pt/pricelist', 'PTServicesApiController@pricelist');
         Route::get('pt/trainers', 'PTServicesApiController@trainers');
-        Route::get('pt/', 'PTServicesApiController@trainers_pricelist');
+        Route::get('/pt', 'PTServicesApiController@trainers_pricelist');
         Route::get('classes/pricelist', 'ClassesServicesApiController@pricelist');
         Route::get('classes/', 'ClassesServicesApiController@classes');
         Route::get('classes/current', 'ClassesServicesApiController@my_classes');
@@ -68,6 +68,7 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin'], 
         Route::get('memberships', 'MembershipsServicesApiController@memberships');
         Route::post('subscription', 'SubscriptionApiController@subscribe');
         Route::post('subscription/guest', 'SubscriptionApiController@guest_subscribe');
+        Route::post('subscribtion/validation' ,'SubscriptionApiController@validate_user');
     });
 
 
@@ -244,6 +245,7 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin'], 
     Route::middleware('auth:sanctum')->post('takeManualAttend' ,'AttendanceAPIController@takeManualAttend');
 
     Route::middleware('auth:sanctum')->apiResource('notifications' ,'NotificationController');
+    Route::middleware('auth:sanctum')->get('clearUserNotifications' , 'NotificationController@clearUSerNotifications');
     
     Route::middleware('auth:sanctum')->post('takePtAttend', 'AttendanceAPIController@takePtAttend');
 });
