@@ -73,7 +73,7 @@
             <div class="card">
                 <div class="card-body">
                     <h3 class="text-center">{{ trans('global.total') }}</h3>
-                    <h3 class="text-center">{{ number_format($due_payments->sum('rest')) }} EGP</h3>
+                    <h3 class="text-center">{{ number_format($due_payments->sum('rest')) }} SAR</h3>
                 </div>
             </div>
         </div>
@@ -115,9 +115,9 @@
                                 </a>
                             </td>
                             <td>{{ $due_payment->membership->service_pricelist->name ?? '-' }} </td>
-                            <td>{{ number_format($due_payment->net_amount) ?? '-' }} EGP</td>
-                            <td>{{ number_format($due_payment->payments_sum_amount) ?? '-' }} EGP</td>
-                            <td>{{ number_format($due_payment->rest) ?? '-' }} EGP</td>
+                            <td>{{ number_format($due_payment->net_amount) ?? '-' }} SAR</td>
+                            <td>{{ number_format($due_payment->payments_sum_amount) ?? '-' }} SAR</td>
+                            <td>{{ number_format($due_payment->rest) ?? '-' }} SAR</td>
                             <td>{{ $due_payment->created_at ?? '-' }}</td>
                             <td>
                                 <div class="btn-group">
